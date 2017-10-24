@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G9T-ch-I3V">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pizza Recipe-->
+        <scene sceneID="qRg-Np-DjY">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="G9T-ch-I3V" customClass="DetailsViewController" customModule="RecipeMaster_recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WGz-8S-y4L"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Fd-hi-P1y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fg9-Fy-Rah">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2L-pH-GSd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-Ec-zJF">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="702"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CpK-eq-PqZ">
+                                                <rect key="frame" x="29.5" y="0.0" width="300" height="150"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l6-TQ-5PK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="NSz-Qe-8Vb"/>
+                                                            <constraint firstAttribute="width" constant="300" id="iQn-Oc-RGL"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doh-2O-5FQ">
+                                                        <rect key="frame" x="0.0" y="20" width="300" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="Ni9-FE-D1z"/>
+                                                            <constraint firstAttribute="width" constant="300" id="y1G-8J-ptt"/>
+                                                        </constraints>
+                                                        <string key="text">Pizza jest potrawą kuchni włoskiej, obecnie szeroko rozpowszechnioną na całym świecie i zaliczaną do dań typu fast food. W wersji podstawowej jest to płaski placek z wytrawnego ciasta makaronowego; znacznie później zaczęto także używać ciasta drożdżowego (focaccia). Pizza pieczona jest w bardzo mocno nagrzanym piecu.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lVu-Gh-2WB">
+                                                <rect key="frame" x="29.5" y="155" width="300" height="160"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Igredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-qU-57N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="Cg4-wZ-2nA"/>
+                                                            <constraint firstAttribute="width" constant="300" id="OBv-1c-WAc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRI-Qo-c8D">
+                                                        <rect key="frame" x="0.0" y="20" width="300" height="140"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="140" id="SAm-eK-OKi"/>
+                                                            <constraint firstAttribute="width" constant="300" id="nuL-AB-H6v"/>
+                                                        </constraints>
+                                                        <string key="text"> 3 szklanki mąki pszennej,
+ 1 łyżeczka soli,
+ oregano, bazylia i słodka   papryka,                                  szklanka ciepłej wody,
+ 50g świeżych drożdży,
+ 3 łyżeczki oliwy z oliwek l ub oleju,
+ szczypta cukru ,
+ sos pomidorowy</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="X14-4H-Qwe">
+                                                <rect key="frame" x="29.5" y="320" width="300" height="290"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-iO-bd6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="ORR-x6-TjK"/>
+                                                            <constraint firstAttribute="height" constant="20" id="d8U-AI-Oj2"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="17" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIJ-wr-7LA">
+                                                        <rect key="frame" x="0.0" y="20" width="300" height="270"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="F4d-Tv-vR0"/>
+                                                            <constraint firstAttribute="height" constant="270" id="okw-yA-hb1"/>
+                                                        </constraints>
+                                                        <string key="text">1. Suche składniki dokładnie mieszamy.,
+2. Drożdże zalawamy ciepłą wodą, olejem i cukrem. Odstawiamy do wyrośnięcia.,
+3. Gotowy płyn wlewamy do mąki i mieszam najpierw łyżką, potem zagniatamy ręką.,
+4. Ciasto odstawiamy pod przykryciem do wyrośnięcia na ok. 30 minut. ,
+5. Rozgrzać piekarnik do 250 st. C.,
+6. Na papierze do pieczenia  uformować z gotowego ciasta placki. Wychodzą dwie cienkie pizze o średnicy 30cm. Jednak ciasto to również nadaje się na wykonanie pizzy na grubym cieście.,
+7. Posmarować spody sosem pomidorowym (przepis na sos) . Można już w tym momencie nałożyć na wierzch pizzy swoje ulubione składniki.,
+8. Piec ok. 7-10 minut</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="u6Y-Xv-FMy">
+                                                <rect key="frame" x="29.5" y="615" width="300" height="87"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza_image_1" translatesAutoresizingMaskIntoConstraints="NO" id="4qc-xL-52e">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="87"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="130" id="0f4-O9-kOO"/>
+                                                            <constraint firstAttribute="height" constant="87" id="Z03-DF-bYF"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza_image_2" translatesAutoresizingMaskIntoConstraints="NO" id="AUy-JO-rjE">
+                                                        <rect key="frame" x="170" y="0.0" width="130" height="87"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="87" id="LuB-tE-5hC"/>
+                                                            <constraint firstAttribute="width" constant="130" id="xld-ie-8c5"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aEj-Ec-zJF" secondAttribute="bottom" id="8nr-qB-h1z"/>
+                                    <constraint firstItem="aEj-Ec-zJF" firstAttribute="leading" secondItem="p2L-pH-GSd" secondAttribute="leadingMargin" id="JuE-74-2mw"/>
+                                    <constraint firstAttribute="trailing" secondItem="aEj-Ec-zJF" secondAttribute="trailing" id="RoV-Lr-JEF"/>
+                                    <constraint firstItem="aEj-Ec-zJF" firstAttribute="top" secondItem="p2L-pH-GSd" secondAttribute="top" id="uQd-zF-cTc"/>
+                                    <constraint firstItem="aEj-Ec-zJF" firstAttribute="centerX" secondItem="p2L-pH-GSd" secondAttribute="centerX" id="wel-vu-wDP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="p2L-pH-GSd" secondAttribute="trailing" id="Egw-Dd-0TF"/>
+                            <constraint firstItem="p2L-pH-GSd" firstAttribute="leading" secondItem="Fg9-Fy-Rah" secondAttribute="leading" id="GoF-Qf-ezS"/>
+                            <constraint firstItem="p2L-pH-GSd" firstAttribute="top" secondItem="WGz-8S-y4L" secondAttribute="bottom" id="uSJ-nK-kcr"/>
+                            <constraint firstItem="3Fd-hi-P1y" firstAttribute="top" secondItem="p2L-pH-GSd" secondAttribute="bottom" id="uus-tg-zUE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pizza Recipe" id="9JT-DS-fra"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QWJ-cu-pT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1997" y="-101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pizza_image_1" width="200" height="200"/>
+        <image name="pizza_image_2" width="200" height="200"/>
+    </resources>
+</document>
