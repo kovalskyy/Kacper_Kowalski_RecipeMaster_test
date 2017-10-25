@@ -45,7 +45,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="cV8-Gg-QWz" kind="show" id="eyg-fF-KQe"/>
+                                            <action selector="actionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZn-kg-flU"/>
+                                            <segue destination="cV8-Gg-QWz" kind="show" identifier="GetRecipeID" id="eyg-fF-KQe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -78,7 +79,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FA-k4-1eB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dRR-xp-hja">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dRR-xp-hja">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
