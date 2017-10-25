@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
-class MainViewController: UIViewController {
+
+class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     
     //MARK: Lifecycle
@@ -17,6 +19,29 @@ class MainViewController: UIViewController {
         super.viewWillAppear(true)
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style:.plain, target:nil, action:nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let loginButton = FBSDKLoginButton()
+        view.addSubview(loginButton)
+        loginButton.frame = CGRect(x: 16.0, y: 500.0, width: view.frame.width - 32, height: 50)
+        
+        loginButton.delegate = self
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("logged out indeed")
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print(error)
+            return
+        }
+        
+        print("success")
     }
     
     @IBAction func actionSheet(_ sender: UIButton) {
@@ -41,5 +66,7 @@ class MainViewController: UIViewController {
         actionSheetController.addAction(facebookActionButton)
         self.present(actionSheetController, animated: true, completion: nil)
     }
+    
+    
 }
 

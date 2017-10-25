@@ -1,0 +1,6 @@
+framework module Pods_RecipeMaster_recruitment {
+  umbrella header "Pods-RecipeMaster_recruitment-umbrella.h"
+
+  export *
+  module * { export * }
+}
