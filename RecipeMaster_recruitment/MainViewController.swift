@@ -11,7 +11,6 @@ import FBSDKLoginKit
 
 
 class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
-
     
     //MARK: Lifecycle
     
@@ -23,6 +22,7 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchProfile()
     }
     
     //MARK: Facebook
@@ -39,25 +39,21 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    func fetchProfile() {
-        
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start {
-            (connection, result, err) in guard
-                
-                let result = result as? NSDictionary,
-                let email = result["email"] as? String,
-                let userName = result["name"] as? String,
-                let userID = result["id"] as? String
-                
-                else { return }
-                print("email:", email, "name:", userName, "userId:", userID)
-        }
-    }
-    
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {}
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {}
 
+    func fetchProfile() {
+        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, id"]).start(completionHandler:  { (connection, result, error) in
+            guard let result = result as? NSDictionary,
+                let name = result["name"] as? String
+                else {
+                    return
+            }
+            self.navigationItem.setTitle(title: "Recipe Master", subtitle: ("Logged in as: \(name)"))
+            print(result)
+        })
+    }
     
     // MARK: ActionSheet
     
@@ -77,6 +73,31 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         actionSheetController.addAction(facebookActionButton)
         self.present(actionSheetController, animated: true, completion: nil)
     }
+}
 
+extension UINavigationItem {
+    func setTitle(title:String, subtitle:String) {
+        
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+        titleLabel.sizeToFit()
+        
+        let subtitleLabel = UILabel()
+        subtitleLabel.text = subtitle
+        subtitleLabel.font = UIFont.systemFont(ofSize: 12)
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.sizeToFit()
+        
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+        stackView.distribution = .equalCentering
+        stackView.axis = .vertical
+        
+        let width = max(titleLabel.frame.size.width, subtitleLabel.frame.size.width)
+        stackView.frame = CGRect(x: 0, y: 0, width: width, height: 35)
+        
+        stackView.alignment = .center
+        self.titleView = stackView
+    }
 }
 

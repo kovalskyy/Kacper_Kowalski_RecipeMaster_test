@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,8 +36,7 @@
                                         <rect key="frame" x="0.0" y="264" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.13404467279999999" green="0.5700450923" blue="0.31050796159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Yu1-J9-dgh"/>
-                                            <constraint firstAttribute="height" constant="44" id="uuW-L7-x5K"/>
+                                            <constraint firstAttribute="height" constant="44" id="nzf-fi-LtQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Open ActionSheetBar">
@@ -50,19 +48,23 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="yfx-hR-J1H" firstAttribute="leading" secondItem="0M2-LT-mCc" secondAttribute="leading" id="Da5-Kk-as5"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jPA-cN-e4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Bo8-EZ-Kcr"/>
-                            <constraint firstItem="jPA-cN-e4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pzs-Yo-bby"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jPA-cN-e4s" secondAttribute="bottom" constant="245" id="NW2-Bx-U9D"/>
+                            <constraint firstItem="jPA-cN-e4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="VXH-cY-tYo"/>
+                            <constraint firstItem="jPA-cN-e4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XA8-kR-W5Y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RecipeMaster" id="3iF-Cy-uxa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="-173"/>
+            <point key="canvasLocation" x="-370.39999999999998" y="-173.16341829085459"/>
         </scene>
         <!--Detail-->
         <scene sceneID="RT3-pG-u1y">
