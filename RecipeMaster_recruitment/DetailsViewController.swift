@@ -10,12 +10,10 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-    
     //MARK: Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        
     }
 
     override func viewDidLoad() {
@@ -23,6 +21,4 @@ class DetailsViewController: UIViewController {
 
         self.automaticallyAdjustsScrollViewInsets = false
     }
-
-
 }
