@@ -13,7 +13,7 @@
         <!--Pizza Recipe-->
         <scene sceneID="qRg-Np-DjY">
             <objects>
-                <viewController storyboardIdentifier="DetailsVC" id="G9T-ch-I3V" customClass="DetailsViewController" customModule="RecipeMaster_recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsVC" automaticallyAdjustsScrollViewInsets="NO" id="G9T-ch-I3V" customClass="DetailsViewController" customModule="RecipeMaster_recruitment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WGz-8S-y4L"/>
                         <viewControllerLayoutGuide type="bottom" id="3Fd-hi-P1y"/>
@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-Ia-zgv">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2L-pH-GSd">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
@@ -154,11 +158,22 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="p2L-pH-GSd" secondAttribute="trailing" id="Egw-Dd-0TF"/>
                             <constraint firstItem="p2L-pH-GSd" firstAttribute="leading" secondItem="Fg9-Fy-Rah" secondAttribute="leading" id="GoF-Qf-ezS"/>
+                            <constraint firstItem="ZkA-Ia-zgv" firstAttribute="centerX" secondItem="p2L-pH-GSd" secondAttribute="centerX" id="PJA-1I-Rlb"/>
                             <constraint firstItem="p2L-pH-GSd" firstAttribute="top" secondItem="WGz-8S-y4L" secondAttribute="bottom" id="uSJ-nK-kcr"/>
                             <constraint firstItem="3Fd-hi-P1y" firstAttribute="top" secondItem="p2L-pH-GSd" secondAttribute="bottom" id="uus-tg-zUE"/>
+                            <constraint firstItem="ZkA-Ia-zgv" firstAttribute="centerY" secondItem="Fg9-Fy-Rah" secondAttribute="centerY" id="vum-DO-ZrL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pizza Recipe" id="9JT-DS-fra"/>
+                    <connections>
+                        <outlet property="acitivityIndicator" destination="ZkA-Ia-zgv" id="V2d-PX-Zrj"/>
+                        <outlet property="descr" destination="doh-2O-5FQ" id="yUY-w6-VnV"/>
+                        <outlet property="firstImage" destination="AUy-JO-rjE" id="MLd-IK-xDV"/>
+                        <outlet property="ingredients" destination="VRI-Qo-c8D" id="ccs-Gk-Eh3"/>
+                        <outlet property="name" destination="2l6-TQ-5PK" id="88b-ZN-3Vm"/>
+                        <outlet property="preparings" destination="gIJ-wr-7LA" id="Kwb-kz-fMq"/>
+                        <outlet property="secondImage" destination="4qc-xL-52e" id="EgA-AY-imB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWJ-cu-pT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

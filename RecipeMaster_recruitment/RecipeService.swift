@@ -61,45 +61,45 @@ class Recipe {
         
         let url = URL(string: Recipe.endPoint)!
         
-    request = Alamofire.request(url).responseJSON { response in
-        debugPrint(response)
-        
-        DispatchQueue.global().async {
-            //  if let result = response.result.value {
+        request = Alamofire.request(url).responseJSON { response in
+            debugPrint(response)
             
-            if let dict = response.result.value as? Dictionary <String, AnyObject> {
+            DispatchQueue.global().async {
+                //  if let result = response.result.value {
                 
-                if let title = dict["title"] as? String {
-                    self._title = title
-                    print("Title:", self._title)
+                if let dict = response.result.value as? Dictionary <String, AnyObject> {
                     
+                    if let title = dict["title"] as? String {
+                        self._title = title
+                        print("Title:", self._title)
+                        
+                    }
+                    if let descr = dict["description"] as? String {
+                        self._description = descr
+                        print("Description", self._description)
+                        
+                    }
+                    if let ingredients = dict["ingredients"] as? Array<String> {
+                        self._ingredients = ingredients.joined(separator: "")
+                        print("Ingredients", self._ingredients)
+                        
+                    }
+                    if let preparing = dict["preparing"] as? Array<String> {
+                        self._preparing = preparing.joined(separator: "")
+                        print("Preparing", self._preparing)
+                        
+                    }
+                    if let images = dict["imgs"] as? Array<String> {
+                        self._images = images.joined(separator: "")
+                        print("Images", self._images)
+                        
+                    }
                 }
-                if let descr = dict["description"] as? String {
-                    self._description = descr
-                    print("Description", self._description)
-                    
-                }
-                if let ingredients = dict["ingredients"] as? Array<String> {
-                    self._ingredients = ingredients.joined(separator: "")
-                    print("Ingredients", self._ingredients)
-                    
-                }
-                if let preparing = dict["preparing"] as? Array<String> {
-                    self._preparing = preparing.joined(separator: "")
-                    print("Preparing", self._preparing)
-                    
-                }
-                if let images = dict["imgs"] as? Array<String> {
-                    self._images = images.joined(separator: "")
-                    print("Images", self._images)
-                    
+                DispatchQueue.main.async {
+                    completed()
                 }
             }
-        }
-        
-        DispatchQueue.main.async {
-            completed()
-            }
+            
         }
     }
     
