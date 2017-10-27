@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RecipeMaster_recruitment.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69AD34E3959FB4D17335475885669EE3</key>
+		<key>6F712943B3C5592E82604940D11CE08A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -48,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>BEF7E6E85DB5CDE5D7A18F4F2EB8494B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C64123A93649EF9741D9B42629B55C78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
