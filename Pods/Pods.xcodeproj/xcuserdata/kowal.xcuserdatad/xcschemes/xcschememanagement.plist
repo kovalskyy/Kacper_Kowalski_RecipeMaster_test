@@ -29,12 +29,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Kingfisher.xcscheme</key>
+		<key>Pods-RecipeMaster_recruitment.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-RecipeMaster_recruitment.xcscheme</key>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,12 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F712943B3C5592E82604940D11CE08A</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>958A43688D45CC6C3197E3EA15C3E3D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B96E33EF6595315B4E69B86E3E828F90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,11 +68,6 @@
 			<true/>
 		</dict>
 		<key>BEF7E6E85DB5CDE5D7A18F4F2EB8494B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C64123A93649EF9741D9B42629B55C78</key>
 		<dict>
 			<key>primary</key>
 			<true/>

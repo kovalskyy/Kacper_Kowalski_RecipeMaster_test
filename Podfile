@@ -7,5 +7,5 @@ target 'RecipeMaster_recruitment' do
 	pod 'FBSDKShareKit'
 	pod 'FBSDKLoginKit' 
 	pod 'Alamofire'
-	pod 'Kingfisher'
+	pod 'SDWebImage'
 end
