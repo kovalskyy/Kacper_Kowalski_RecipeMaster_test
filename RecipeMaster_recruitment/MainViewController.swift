@@ -12,6 +12,8 @@ import FBSDKLoginKit
 
 class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    @IBOutlet weak var mainImage: UIImageView!
+    
     //MARK: Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,6 +24,9 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mainImage.layer.cornerRadius = mainImage.frame.height/2
+        mainImage.clipsToBounds = true
         fetchProfile()
     }
     
