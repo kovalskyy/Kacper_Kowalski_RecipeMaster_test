@@ -52,6 +52,8 @@ class DetailsViewController: UIViewController {
         }
     }
 
+    //MARK: Private methods
+    
     func hideTestDataOnLoad() {
         descr.text = ""
         ingredients.text = ""
@@ -61,9 +63,15 @@ class DetailsViewController: UIViewController {
     }
     
     func updateUI () {
+        
+        let styleIngredients = " - 3 szklanki mąki pszennej \n - 1 łyżeczka soli \n - przyprawy do smaku (oregano, bazylia i słodka papryka) \n - 1 szklanka ciepłej wody \n - 50g swieżych drożdży \n - 3 łyżeczki oliwy z oliwek lub oleju \n - szczypta cukru \n - sos pomidorowy"
+        let stylePreparings = " 1. Suche składniki dokładnie mieszamy \n 2.Drożdże zalewamy ciepłą wodą, olejem i cukrem \n 3. Odstawiamy do wyrośnięcia \n 4. Gotowy płyn wlewamy do mąki i mieszam najpierw łyżką, a potem zagniatamy ręką \n 5. Ciasto odstawiamy pod przykryciem do wyrośnięcia na ok. 30 minut \n 6. Rozgrzać piekarnik do 250 st.C \n 7. Na papierze do pieczenia uformować z gotowego ciasta placki. Wychodzą dwie cienkie pizze o średnicy 30cm. Jednak ciasto to również nadaje się na wykonanie pizzy na grubym cieście \n 8. Posmarować spody sosem pomidorowym. Można już w tym momencie nałożyć na wierzch pizzy swoje ulubione składniki. \n 9. Piec ok. 7-10 minut"
+        
+        if recipe.ingredients != "" && recipe.preparing != "" {
+            ingredients.text = styleIngredients
+            preparings.text = stylePreparings
+        }
         name.text = recipe.title
         descr.text = recipe.description
-        ingredients.text = recipe.ingredients
-        preparings.text = recipe.preparing
     }
 }
