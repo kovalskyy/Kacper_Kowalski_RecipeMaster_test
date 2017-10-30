@@ -76,18 +76,12 @@ class Recipe {
                     }
                     if let ingredients = dict["ingredients"] as? Array<String> {
                         self._ingredients = ingredients.joined(separator: "")
-                        print("Ingredients", self._ingredients)
-                        
                     }
                     if let preparing = dict["preparing"] as? Array<String> {
                         self._preparing = preparing.joined(separator: "\n")
-                        print("Preparing", self._preparing)
-                        
-                    }
+                     }
                     if let images = dict["imgs"] as? Array<String> {
                         self._images = images.joined(separator: "")
-                        print("Images", self._images)
-                        
                     }
                 }
                 DispatchQueue.main.async {

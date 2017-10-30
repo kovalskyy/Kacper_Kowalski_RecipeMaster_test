@@ -54,6 +54,12 @@ class DetailsViewController: UIViewController {
 
     //MARK: Private methods
     
+    @IBAction func saveFirstImage(_ sender: UIButton) {
+        print("tapped here - first")
+    }
+    @IBAction func saveSecondImage(_ sender: UIButton) {
+        print("tapped here - second")
+    }
     func hideTestDataOnLoad() {
         descr.text = ""
         ingredients.text = ""

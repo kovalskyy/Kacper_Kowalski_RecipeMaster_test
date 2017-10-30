@@ -144,11 +144,46 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="q4t-hq-nA6">
+                                        <rect key="frame" x="15" y="622" width="290" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XJ-XE-GWl">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="nng-0p-C2M"/>
+                                                    <constraint firstAttribute="width" constant="130" id="rQd-Td-lXd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveFirstImage:" destination="G9T-ch-I3V" eventType="touchUpInside" id="3Da-49-fGi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-rd-THN">
+                                                <rect key="frame" x="160" y="0.0" width="130" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="50x-sR-TGM"/>
+                                                    <constraint firstAttribute="height" constant="70" id="SaO-xY-wfl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveSecondImage:" destination="G9T-ch-I3V" eventType="touchUpInside" id="PX9-2e-rtV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="aEj-Ec-zJF" secondAttribute="bottom" id="8nr-qB-h1z"/>
                                     <constraint firstItem="aEj-Ec-zJF" firstAttribute="leading" secondItem="p2L-pH-GSd" secondAttribute="leadingMargin" id="JuE-74-2mw"/>
                                     <constraint firstAttribute="trailing" secondItem="aEj-Ec-zJF" secondAttribute="trailing" id="RoV-Lr-JEF"/>
+                                    <constraint firstAttribute="bottom" secondItem="q4t-hq-nA6" secondAttribute="bottom" constant="10" id="iYf-Jl-1m6"/>
+                                    <constraint firstItem="q4t-hq-nA6" firstAttribute="centerX" secondItem="aEj-Ec-zJF" secondAttribute="centerX" id="rGb-7p-u0a"/>
                                     <constraint firstItem="aEj-Ec-zJF" firstAttribute="top" secondItem="p2L-pH-GSd" secondAttribute="top" id="uQd-zF-cTc"/>
                                     <constraint firstItem="aEj-Ec-zJF" firstAttribute="centerX" secondItem="p2L-pH-GSd" secondAttribute="centerX" id="wel-vu-wDP"/>
                                 </constraints>
