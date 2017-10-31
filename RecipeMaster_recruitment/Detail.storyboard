@@ -203,11 +203,11 @@
                     <connections>
                         <outlet property="acitivityIndicator" destination="ZkA-Ia-zgv" id="V2d-PX-Zrj"/>
                         <outlet property="descr" destination="doh-2O-5FQ" id="yUY-w6-VnV"/>
-                        <outlet property="firstImage" destination="AUy-JO-rjE" id="MLd-IK-xDV"/>
+                        <outlet property="firstImage" destination="4qc-xL-52e" id="ZDT-0P-5A8"/>
                         <outlet property="ingredients" destination="VRI-Qo-c8D" id="ccs-Gk-Eh3"/>
                         <outlet property="name" destination="2l6-TQ-5PK" id="88b-ZN-3Vm"/>
                         <outlet property="preparings" destination="gIJ-wr-7LA" id="Kwb-kz-fMq"/>
-                        <outlet property="secondImage" destination="4qc-xL-52e" id="EgA-AY-imB"/>
+                        <outlet property="secondImage" destination="AUy-JO-rjE" id="lPN-L5-VZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWJ-cu-pT4" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import Photos
 
 class DetailsViewController: UIViewController {
 
@@ -54,25 +55,6 @@ class DetailsViewController: UIViewController {
 
     //MARK: Private methods
     
-    @IBAction func saveFirstImage(_ sender: UIButton) {
-        UIImageWriteToSavedPhotosAlbum(secondImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-    }
-    @IBAction func saveSecondImage(_ sender: UIButton) {
-        UIImageWriteToSavedPhotosAlbum(firstImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-    }
-    
-    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            let ac = UIAlertController(title: "An error occured while saving image!", message: error.localizedDescription, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
-        } else {
-            let ac = UIAlertController(title: "Image Saved!", message: "Your delicious pizza image has been saved to photo library.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
-        }
-    }
-    
     private func hideTestDataOnLoad() {
         descr.text = ""
         ingredients.text = ""
@@ -81,7 +63,7 @@ class DetailsViewController: UIViewController {
         secondImage.image = nil
     }
     
-     private func updateUI () {
+    private func updateUI () {
         
         let styleIngredients = " - 3 szklanki mąki pszennej \n - 1 łyżeczka soli \n - przyprawy do smaku (oregano, bazylia i słodka papryka) \n - 1 szklanka ciepłej wody \n - 50g swieżych drożdży \n - 3 łyżeczki oliwy z oliwek lub oleju \n - szczypta cukru \n - sos pomidorowy"
         let stylePreparings = " 1. Suche składniki dokładnie mieszamy \n 2.Drożdże zalewamy ciepłą wodą, olejem i cukrem \n 3. Odstawiamy do wyrośnięcia \n 4. Gotowy płyn wlewamy do mąki i mieszam najpierw łyżką, a potem zagniatamy ręką \n 5. Ciasto odstawiamy pod przykryciem do wyrośnięcia na ok. 30 minut \n 6. Rozgrzać piekarnik do 250 st.C \n 7. Na papierze do pieczenia uformować z gotowego ciasta placki. Wychodzą dwie cienkie pizze o średnicy 30cm. Jednak ciasto to również nadaje się na wykonanie pizzy na grubym cieście \n 8. Posmarować spody sosem pomidorowym. Można już w tym momencie nałożyć na wierzch pizzy swoje ulubione składniki. \n 9. Piec ok. 7-10 minut"
@@ -92,5 +74,50 @@ class DetailsViewController: UIViewController {
         }
         name.text = recipe.title
         descr.text = recipe.description
+    }
+
+    //MARK: Saving Images 
+    
+    @IBAction func saveFirstImage(_ sender: UIButton) {
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: self.firstImage.image!) }, completionHandler: { success, error in
+                if success {
+                    self.presentAlert(withTitle: "Image Saved!", message: "Your delicious pizza image has been saved to photo library.")
+                }
+                else if let error = error {
+                    self.presentAlert(withTitle: "An error occured while saving image!", message: error.localizedDescription)
+                }
+                else {
+                    // Save photo failed with no error
+                    print("ops, we just got failed!")
+                }
+        })
+    }
+    
+    @IBAction func saveSecondImage(_ sender: UIButton) {
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: self.secondImage.image!) }, completionHandler: { success, error in
+                if success {
+                    self.presentAlert(withTitle: "Image Saved!", message: "Your delicious pizza image has been saved to photo library.")
+                }
+                else if let error = error {
+                    self.presentAlert(withTitle: "An error occured while saving image!", message: error.localizedDescription)
+                }
+                else {
+                    // Save photo failed with no error
+                    print("ops, we just got failed!")
+                }
+        })
+    }
+}
+
+extension UIViewController {
+    
+    func presentAlert(withTitle title: String, message : String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+        }
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
