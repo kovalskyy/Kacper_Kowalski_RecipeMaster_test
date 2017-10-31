@@ -79,35 +79,19 @@ class DetailsViewController: UIViewController {
     //MARK: Saving Images 
     
     @IBAction func saveFirstImage(_ sender: UIButton) {
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAsset(from: self.firstImage.image!) }, completionHandler: { success, error in
-                if success {
-                    self.presentAlert(withTitle: "Image Saved!", message: "Your delicious pizza image has been saved to photo library.")
-                }
-                else if let error = error {
-                    self.presentAlert(withTitle: "An error occured while saving image!", message: error.localizedDescription)
-                }
-                else {
-                    // Save photo failed with no error
-                    print("ops, we just got failed!")
-                }
-        })
+        UIImageWriteToSavedPhotosAlbum(firstImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @IBAction func saveSecondImage(_ sender: UIButton) {
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAsset(from: self.secondImage.image!) }, completionHandler: { success, error in
-                if success {
-                    self.presentAlert(withTitle: "Image Saved!", message: "Your delicious pizza image has been saved to photo library.")
-                }
-                else if let error = error {
-                    self.presentAlert(withTitle: "An error occured while saving image!", message: error.localizedDescription)
-                }
-                else {
-                    // Save photo failed with no error
-                    print("ops, we just got failed!")
-                }
-        })
+        UIImageWriteToSavedPhotosAlbum(secondImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            presentAlert(withTitle: "An Error Occured!", message: error.localizedDescription)
+        } else {
+            presentAlert(withTitle: "Image Saved!", message: "Your delicious pizza image has been saved!")
+        }
     }
 }
 
