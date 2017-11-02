@@ -64,7 +64,7 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBAction func actionSheet(_ sender: UIButton) {
         
-        let actionSheetController = UIAlertController(title: "Please select one of the options", message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Please select one of the options", message: nil, preferredStyle: .actionSheet)
         
         let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
         
@@ -73,10 +73,14 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         let facebookActionButton = UIAlertAction(title: "Login with Facebook", style: .default) { action in self.handleCustomFacebookLogin() }
 
         //actions
-        actionSheetController.addAction(cancelActionButton)
-        actionSheetController.addAction(recipeActionButton)
-        actionSheetController.addAction(facebookActionButton)
-        self.present(actionSheetController, animated: true, completion: nil)
+        alert.addAction(cancelActionButton)
+        alert.addAction(recipeActionButton)
+        alert.addAction(facebookActionButton)
+        
+        // support ipad
+        alert.popoverPresentationController?.sourceView = self.view;
+        alert.popoverPresentationController?.sourceRect = self.view.frame;
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

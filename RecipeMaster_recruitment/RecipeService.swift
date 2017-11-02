@@ -75,10 +75,12 @@ class Recipe {
                         self._description = descr
                     }
                     if let ingredients = dict["ingredients"] as? Array<String> {
-                        self._ingredients = ingredients.joined(separator: "")
+                        self._ingredients = ingredients.map{" - \($0)"}.joined(separator: "\n")
+                       // print("Ingredients:", self._ingredients)
                     }
                     if let preparing = dict["preparing"] as? Array<String> {
-                        self._preparing = preparing.joined(separator: "\n")
+                        self._preparing = preparing.enumerated().map{"\($0+1). \($1)"}.joined(separator: "\n")
+                       // print("Preparings:", self._preparing)
                      }
                     if let images = dict["imgs"] as? Array<String> {
                         self._images = images.joined(separator: "")
