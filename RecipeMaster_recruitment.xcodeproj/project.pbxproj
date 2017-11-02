@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235A4F0D1FAB41FD00BE2433 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A4F0C1FAB41FD00BE2433 /* Label.swift */; };
 		23628AF61F9F5BEF00040378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23628AF51F9F5BEF00040378 /* AppDelegate.swift */; };
 		23628AF81F9F5BEF00040378 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23628AF71F9F5BEF00040378 /* MainViewController.swift */; };
 		23628AFB1F9F5BEF00040378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23628AF91F9F5BEF00040378 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		059B6975C14907016C2A09B1 /* Pods-RecipeMaster_recruitment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMaster_recruitment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMaster_recruitment/Pods-RecipeMaster_recruitment.debug.xcconfig"; sourceTree = "<group>"; };
 		1FBFC86FEED34D677D4DAA39 /* Pods_RecipeMaster_recruitment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeMaster_recruitment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		235A4F0C1FAB41FD00BE2433 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		23628AF21F9F5BEF00040378 /* RecipeMaster_recruitment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeMaster_recruitment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23628AF51F9F5BEF00040378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23628AF71F9F5BEF00040378 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				23628AF91F9F5BEF00040378 /* Main.storyboard */,
 				23628B0C1F9F762A00040378 /* Detail.storyboard */,
+				235A4F0C1FAB41FD00BE2433 /* Label.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				23628AF81F9F5BEF00040378 /* MainViewController.swift in Sources */,
 				23628AF61F9F5BEF00040378 /* AppDelegate.swift in Sources */,
 				23628B0F1F9F91A400040378 /* DetailsViewController.swift in Sources */,
+				235A4F0D1FAB41FD00BE2433 /* Label.swift in Sources */,
 				23F9A29E1FA32FF90005F851 /* RecipeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
