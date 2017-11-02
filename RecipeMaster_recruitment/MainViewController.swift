@@ -9,7 +9,6 @@
 import UIKit
 import FBSDKLoginKit
 
-
 class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var mainImage: UIImageView!
