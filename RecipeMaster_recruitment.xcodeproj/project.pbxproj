@@ -16,6 +16,7 @@
 		23628B0D1F9F762A00040378 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23628B0C1F9F762A00040378 /* Detail.storyboard */; };
 		23628B0F1F9F91A400040378 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23628B0E1F9F91A400040378 /* DetailsViewController.swift */; };
 		23F9A29E1FA32FF90005F851 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9A29D1FA32FF90005F851 /* RecipeService.swift */; };
+		2BB7B0FF1FC2DDB700EDECDD /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7B0FE1FC2DDB700EDECDD /* RecipeModel.swift */; };
 		A3BD9D63C3405EE74C513359 /* Pods_RecipeMaster_recruitment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBFC86FEED34D677D4DAA39 /* Pods_RecipeMaster_recruitment.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		23628B0E1F9F91A400040378 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		23F9A29D1FA32FF90005F851 /* RecipeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		23FF7F271FA0C0A70016E36B /* RecipeMaster_recruitment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeMaster_recruitment.entitlements; sourceTree = "<group>"; };
+		2BB7B0FE1FC2DDB700EDECDD /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		474AFDE7FE5258339992DC7E /* Pods-RecipeMaster_recruitment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMaster_recruitment.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMaster_recruitment/Pods-RecipeMaster_recruitment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,9 +100,8 @@
 		23628B081F9F5DB800040378 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				23628AF91F9F5BEF00040378 /* Main.storyboard */,
-				23628B0C1F9F762A00040378 /* Detail.storyboard */,
 				235A4F0C1FAB41FD00BE2433 /* Label.swift */,
+				2BB7B0FD1FC2DD8800EDECDD /* Storyboards */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -108,7 +109,8 @@
 		23628B091F9F5DBA00040378 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				23F9A29A1FA32E770005F851 /* Service */,
+				2BB7B0FE1FC2DDB700EDECDD /* RecipeModel.swift */,
+				23F9A29A1FA32E770005F851 /* NetworkManager */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -125,12 +127,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		23F9A29A1FA32E770005F851 /* Service */ = {
+		23F9A29A1FA32E770005F851 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
 				23F9A29D1FA32FF90005F851 /* RecipeService.swift */,
 			);
-			name = Service;
+			name = NetworkManager;
+			sourceTree = "<group>";
+		};
+		2BB7B0FD1FC2DD8800EDECDD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				23628AF91F9F5BEF00040378 /* Main.storyboard */,
+				23628B0C1F9F762A00040378 /* Detail.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		AEF9B650224122E842EEDC77 /* Pods */ = {
@@ -295,6 +306,7 @@
 				23628B0F1F9F91A400040378 /* DetailsViewController.swift in Sources */,
 				235A4F0D1FAB41FD00BE2433 /* Label.swift in Sources */,
 				23F9A29E1FA32FF90005F851 /* RecipeService.swift in Sources */,
+				2BB7B0FF1FC2DDB700EDECDD /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
