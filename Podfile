@@ -8,4 +8,5 @@ target 'RecipeMaster_recruitment' do
 	pod 'FBSDKLoginKit' 
 	pod 'Alamofire'
 	pod 'SDWebImage'
+	pod 'Gloss'
 end
