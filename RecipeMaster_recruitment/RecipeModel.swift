@@ -9,7 +9,7 @@
 import Foundation
 import Gloss
 
-final class RecipeMaster: Gloss.Decodable {
+final class RecipeModel: Gloss.Decodable {
     let description: String
     let images: [String]
     let ingredients: [String]
