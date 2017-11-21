@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9FA-k4-1eB">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9FA-k4-1eB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,15 +49,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbj-BJ-5AT">
+                                <rect key="frame" x="112" y="166.5" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="oYN-zi-TTU"/>
+                                    <constraint firstAttribute="height" constant="30" id="u9N-wI-yon"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Uoa-3E-1NG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Hh-ag-JDk"/>
+                            <constraint firstItem="Zbj-BJ-5AT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Lm-jb-xlj"/>
+                            <constraint firstItem="Uoa-3E-1NG" firstAttribute="top" secondItem="Zbj-BJ-5AT" secondAttribute="bottom" constant="15" id="Nx2-y9-JLd"/>
                             <constraint firstItem="Uoa-3E-1NG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n22-hx-ndf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RecipeMaster" id="3iF-Cy-uxa"/>
                     <connections>
+                        <outlet property="loginButton" destination="Zbj-BJ-5AT" id="1uK-t1-gkE"/>
                         <outlet property="mainImage" destination="yfx-hR-J1H" id="tIq-Wz-lzB"/>
                     </connections>
                 </viewController>
@@ -80,7 +92,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FA-k4-1eB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dRR-xp-hja">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>

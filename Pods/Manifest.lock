@@ -13,9 +13,13 @@ PODS:
   - FBSDKShareKit (4.27.1):
     - FBSDKCoreKit
   - Gloss (1.2.4)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
+  - SwiftyBeaver (1.4.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -23,7 +27,10 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - Gloss
+  - RxCocoa
+  - RxSwift
   - SDWebImage
+  - SwiftyBeaver
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -32,8 +39,11 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
   FBSDKShareKit: 6a6a0ef9e850c741e4e1d7a7d21335205e997ec1
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SwiftyBeaver: e10b1668e0512229c36c34769b97eed3dfae2ca3
 
-PODFILE CHECKSUM: 85a6f71bc29086a43d987021ad92158865ae3ec3
+PODFILE CHECKSUM: bc69569ce6f91d39173e423b273e0808510efb02
 
 COCOAPODS: 1.3.1
