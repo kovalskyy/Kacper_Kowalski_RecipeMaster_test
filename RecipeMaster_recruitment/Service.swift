@@ -12,7 +12,7 @@ struct RecipeService: Gettable {
     
     let downloader = NetworManager()
 
-    typealias currentRecipeCompletionHandler = (Result<RecipeModel?>) -> ()
+    typealias currentRecipeCompletionHandler = (Result<[RecipeModel?]>) -> ()
 
     func get(completion: @escaping currentRecipeCompletionHandler) {
 
@@ -31,7 +31,7 @@ struct RecipeService: Gettable {
                     return
                 case .success(let json):
                     let recipe = RecipeModel(json: json)
-                    completion(.success(recipe))
+                    completion(.success([recipe]))
                 }
             }
         }

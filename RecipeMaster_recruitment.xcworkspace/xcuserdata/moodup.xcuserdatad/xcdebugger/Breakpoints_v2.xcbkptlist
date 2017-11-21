@@ -9,13 +9,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RecipeMaster_recruitment/RecipeService.swift"
-            timestampString = "532877851.682614"
+            filePath = "RecipeMaster_recruitment/Service.swift"
+            timestampString = "532949457.09029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "fetchRecipe(_:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "get(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RecipeMaster_recruitment.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;) -&gt; () in RecipeMaster_recruitment.RecipeService.get(completion: (RecipeMaster_recruitment.Result&lt;Swift.Array&lt;Swift.Optional&lt;RecipeMaster_recruitment.RecipeModel&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RecipeMaster_recruitment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/moodup/Documents/Kacper_Kowalski_RecipeMaster_test/RecipeMaster_recruitment/Service.swift"
+                  timestampString = "532949457.260317"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (RecipeMaster_recruitment.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;) -&gt; () in RecipeMaster_recruitment.RecipeService.get(completion: (RecipeMaster_recruitment.Result&lt;Swift.Array&lt;Swift.Optional&lt;RecipeMaster_recruitment.RecipeModel&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RecipeMaster_recruitment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/moodup/Documents/Kacper_Kowalski_RecipeMaster_test/RecipeMaster_recruitment/Service.swift"
+                  timestampString = "532949457.264282"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipeMaster_recruitment/DetailsViewController.swift"
+            timestampString = "532949457.090812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "getRecipes(fromService:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipeMaster_recruitment/DetailsViewController.swift"
+            timestampString = "532949457.091224"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "updateUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster_recruitment/Service.swift"
-            timestampString = "532886005.969715"
+            timestampString = "532949457.091606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "get(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipeMaster_recruitment/DetailsViewController.swift"
+            timestampString = "532949457.0919"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

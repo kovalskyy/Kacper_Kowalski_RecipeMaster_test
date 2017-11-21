@@ -13,6 +13,8 @@ import Photos
 class DetailsViewController: UIViewController {
 
     var recipe: Recipe!
+    let service = RecipeService()
+    private var recipeArray = [RecipeModel]()
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descr: UILabel!
@@ -41,33 +43,54 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        hideTestDataOnLoad()
-        recipe = Recipe()
         
-        recipe.fetchRecipe {
-        self.updateUI()
+        hideTestDataOnLoad()
+        getRecipes(fromService: service)
+//        self.updateUI()
         self.acitivityIndicator.stopAnimating()
-        DispatchQueue.main.async {
-            }
-        }
+
+//        hideTestDataOnLoad()
+//        recipe = Recipe()
+//
+//        recipe.fetchRecipe {
+//        self.updateUI()
+//        self.acitivityIndicator.stopAnimating()
+//        }
     }
 
     //MARK: Private methods
     
+    private func getRecipes<S: Gettable>(fromService service: S) where S.T == Array<RecipeModel?> {
+        
+        service.get { [weak self] (result) in
+            switch result {
+            case .success(let recipes):
+                var tempRecipes = [RecipeModel]()
+                for recipe in recipes {
+                    if let recipe = recipe {
+                        tempRecipes.append(recipe)
+                    }
+                }
+                self?.recipeArray = tempRecipes
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
     private func hideTestDataOnLoad() {
-        descr.text = ""
-        ingredients.text = ""
-        preparings.text = ""
-        firstImage.image = nil
-        secondImage.image = nil
+        self.descr.text = ""
+        self.ingredients.text = ""
+        self.preparings.text = ""
+        self.firstImage.image = nil
+        self.secondImage.image = nil
     }
     
     private func updateUI () {
-        ingredients.text = recipe.ingredients
-        preparings.text = recipe.preparing
-        name.text = recipe.title
-        descr.text = recipe.description
+        self.ingredients.text = recipe.ingredients
+        self.preparings.text = recipe.preparing
+        self.name.text = recipe.title
+        self.descr.text = recipe.description
     }
 
     //MARK: Saving Images
