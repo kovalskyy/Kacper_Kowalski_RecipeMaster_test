@@ -12,7 +12,7 @@ import Photos
 
 class DetailsViewController: UIViewController {
 
-    var recipe: Recipp!
+    var recipe: Recipe!
     var viewModel: DetailViewModel?
     
     @IBOutlet weak var name: UILabel!
@@ -47,14 +47,9 @@ class DetailsViewController: UIViewController {
         self.viewModel?.delegate = self
         
         self.hideTestDataOnLoad()
-//        self.updateUI()
         self.acitivityIndicator.stopAnimating()
-////        recipe.fetchRecipe {
-//            self.updateUI()
-//            self.acitivityIndicator.stopAnimating()
-//        }
     }
-
+    
     //MARK: Private methods
     
     private func hideTestDataOnLoad() {
@@ -65,9 +60,20 @@ class DetailsViewController: UIViewController {
         self.secondImage.image = nil
     }
     
-    private func updateUI () {
-        self.ingredients.text = recipe.ingredients
-        self.preparings.text = recipe.preparing
+    fileprivate func updateUI () {
+        var ingredients = ""
+        guard let ingr = recipe.ingredients else { return }
+        for ingredient in ingr {
+            ingredients.append(ingredient)
+        }
+        var preparings = ""
+        guard let prep = recipe.preparings else { return }
+        for preparing in prep {
+            preparings.append(preparing)
+        }
+        
+        self.ingredients.text = ingredients
+        self.preparings.text = preparings
         self.name.text = recipe.title
         self.descr.text = recipe.description
     }
@@ -95,14 +101,11 @@ extension DetailsViewController: RecipeProtocol {
     func prepareView() {
         self.viewModel?.getRecipe()
     }
-    
-    func onError(error: Error) {
-        
-    }
+    func onError(error: Error) {}
     
     func onCompleted(recipe: Recipe) {
-        
+        self.recipe = recipe
+        self.updateUI()
     }
-    
 }
 

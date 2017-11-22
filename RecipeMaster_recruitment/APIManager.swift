@@ -1,5 +1,5 @@
 //
-//  APiManager.swift
+//  APIManager.swift
 //  RecipeMaster_recruitment
 //
 //  Created by Moodup on 22.11.2017.

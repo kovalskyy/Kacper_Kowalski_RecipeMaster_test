@@ -13,7 +13,7 @@ class Recipe: Mappable {
     var description: String?
     var images: [String]?
     var ingredients: [String]?
-    var preparing: [String]?
+    var preparings: [String]?
     var title: String?
     
     // MARK: ObjectMapper Initalizers
@@ -23,7 +23,7 @@ class Recipe: Mappable {
         self.description <- map["description"]
         self.images  <- map["imgs"]
         self.ingredients <- map["ingredients"]
-        self.preparing   <- map["preparing"]
+        self.preparings   <- map["preparing"]
         self.title   <- map["title"]
     }
 }
