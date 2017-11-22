@@ -13,4 +13,5 @@ target 'RecipeMaster_recruitment' do
 	pod 'SwiftyBeaver'
 	pod 'ObjectMapper'
 	pod 'SwinjectStoryboard'
+	pod 'AlamofireObjectMapper'
 end

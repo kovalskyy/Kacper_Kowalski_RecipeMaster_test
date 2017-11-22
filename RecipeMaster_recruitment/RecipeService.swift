@@ -59,7 +59,7 @@ class Recipp {
     
     func fetchRecipe(_ completed: @escaping RecipeCompletionHandler) {
         
-        let url = URL(string: Recipe.endPoint)!
+        let url = URL(string: Recipp.endPoint)!
         
         request = Alamofire.request(url).responseJSON { response in
             debugPrint(response)

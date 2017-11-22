@@ -26,6 +26,5 @@ class Recipe: Mappable {
         self.preparing   <- map["preparing"]
         self.title   <- map["title"]
     }
-    
 }
 

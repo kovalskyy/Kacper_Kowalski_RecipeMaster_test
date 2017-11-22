@@ -13,8 +13,7 @@ import Photos
 class DetailsViewController: UIViewController {
 
     var recipe: Recipp!
-    let service = RecipeService()
-    
+//    let service = RecipeService()
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descr: UILabel!
