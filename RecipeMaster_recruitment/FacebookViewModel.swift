@@ -33,31 +33,4 @@ final class FacebookViewModel: ViewModel {
             return
         }
     }
-        // TODO: token
-//        guard let token = loginResult?.token.tokenString else { return }
-        //authenticateWithFacebook(accessToken: token)
-    
-    
-    //protocol FacebookSignInViewModelDelegate: class {
-    //    func didClose()
-    //}
-    
-//    private func authenticateWithFacebook(accessToken token: String) {
-//        operationInProgress.value = true
-//
-//        let onNext: (Account) -> Void = { [weak self] _ in
-//            self?.delegate.didClose()
-//        }
-//
-//        let onError: (Swift.Error) -> Void = { [weak self] error in
-//            log.error(error)
-//            self?.operationInProgress.value = false
-//            self?.errorMessage.onNext(error.localizedDescription)
-//        }
-//    }
-//        authenticateWithFacebook(accessToken: token)
-//            .subscribe(onNext: onNext, onError: onError)
-//            .disposed(by: disposeBag)
-//    }
- 
 }

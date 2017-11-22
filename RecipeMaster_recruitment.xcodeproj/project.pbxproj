@@ -96,6 +96,7 @@
 		23628AF41F9F5BEF00040378 /* RecipeMaster_recruitment */ = {
 			isa = PBXGroup;
 			children = (
+				23628AF51F9F5BEF00040378 /* AppDelegate.swift */,
 				23628B091F9F5DBA00040378 /* Models */,
 				2B3C3D761FC431FF002F3749 /* ViewModels */,
 				23628B081F9F5DB800040378 /* Views */,
@@ -136,8 +137,7 @@
 		23628B0A1F9F5DC400040378 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2B899C9D1FC3068A00DE5A33 /* Constants.swift */,
-				23628AF51F9F5BEF00040378 /* AppDelegate.swift */,
+				2B38E2A61FC5862900C54BF8 /* Settings */,
 				23628AFC1F9F5BEF00040378 /* Assets.xcassets */,
 				23628AFE1F9F5BEF00040378 /* LaunchScreen.storyboard */,
 				23628B011F9F5BEF00040378 /* Info.plist */,
@@ -153,9 +153,17 @@
 				2BB7B1001FC2F3CA00EDECDD /* NetworkManager.swift */,
 				2BB7B1021FC2F66700EDECDD /* Result.swift */,
 				2B899C9F1FC30AC300DE5A33 /* Service.swift */,
-				2B65B9391FC4655D00EE4D7E /* Settings.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		2B38E2A61FC5862900C54BF8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2B899C9D1FC3068A00DE5A33 /* Constants.swift */,
+				2B65B9391FC4655D00EE4D7E /* Settings.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		2B3C3D761FC431FF002F3749 /* ViewModels */ = {

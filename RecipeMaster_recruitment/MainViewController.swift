@@ -16,19 +16,10 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var loginButton: FBSDKLoginButton!
     
-    private let viewModel: FacebookViewModel!
+    private var viewModel: FacebookViewModel!
     let disposeBag = DisposeBag()
     
     //MARK: Lifecycle
-    
-    init(viewModel: FacebookViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -39,14 +30,16 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.loginButton.delegate = self
+        viewModel = FacebookViewModel()
+        
+//        self.loginButton.delegate = self
         mainImage.layer.cornerRadius = mainImage.frame.height/2
         mainImage.clipsToBounds = true
     }
     
     // MARK: - Facebook/Rx binding
     
-    private func bindViewModel() {
+    private func setupBinding() {
 
         loginButton.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -141,33 +134,3 @@ extension UINavigationItem {
     }
 }
 
-
-//MARK: Facebook
-
-//    func handleCustomFacebookLogin() {
-//        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) {
-//            (result, error) in
-//
-//            if error != nil {
-//                print("something went wrong", error ?? "")
-//                return
-//            }
-//            self.fetchProfile()
-//        }
-//    }
-//
-//    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {}
-//
-//    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {}
-//
-//    func fetchProfile() {
-//        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, id"]).start(completionHandler:  { (connection, result, error) in
-//            guard let result = result as? NSDictionary,
-//                let name = result["name"] as? String
-//                else {
-//                    return
-//            }
-//            self.navigationItem.setTitle(title: "Recipe Master", subtitle: ("Logged in as: \(name)"))
-//            print(result)
-//        })
-//    }

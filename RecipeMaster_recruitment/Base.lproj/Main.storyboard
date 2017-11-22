@@ -68,7 +68,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="RecipeMaster" id="3iF-Cy-uxa"/>
                     <connections>
-                        <outlet property="loginButton" destination="Zbj-BJ-5AT" id="1uK-t1-gkE"/>
                         <outlet property="mainImage" destination="yfx-hR-J1H" id="tIq-Wz-lzB"/>
                     </connections>
                 </viewController>

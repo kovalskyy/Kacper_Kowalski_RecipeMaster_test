@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster_recruitment/Service.swift"
-            timestampString = "532949457.09029"
+            timestampString = "533035103.805658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -26,7 +26,7 @@
                   moduleName = "RecipeMaster_recruitment"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/moodup/Documents/Kacper_Kowalski_RecipeMaster_test/RecipeMaster_recruitment/Service.swift"
-                  timestampString = "532972637.631908"
+                  timestampString = "533035297.998784"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -41,7 +41,7 @@
                   moduleName = "RecipeMaster_recruitment"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/moodup/Documents/Kacper_Kowalski_RecipeMaster_test/RecipeMaster_recruitment/Service.swift"
-                  timestampString = "532972637.637826"
+                  timestampString = "533035298.004645"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster_recruitment/DetailsViewController.swift"
-            timestampString = "532949457.090812"
+            timestampString = "533035297.835153"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "getRecipes(fromService:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster_recruitment/DetailsViewController.swift"
-            timestampString = "532949457.091224"
+            timestampString = "533035297.835546"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "updateUI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster_recruitment/Service.swift"
-            timestampString = "532949457.091606"
+            timestampString = "533035103.808249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -106,13 +106,31 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipeMaster_recruitment/DetailsViewController.swift"
-            timestampString = "532949457.0919"
+            timestampString = "533035297.835667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

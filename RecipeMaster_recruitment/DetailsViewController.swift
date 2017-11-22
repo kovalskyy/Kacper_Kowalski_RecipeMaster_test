@@ -63,6 +63,7 @@ class DetailsViewController: UIViewController {
     private func getRecipes<S: Gettable>(fromService service: S) where S.T == Array<RecipeModel?> {
         
         service.get { [weak self] (result) in
+            guard let weakSelf = self else { return }
             switch result {
             case .success(let recipes):
                 var tempRecipes = [RecipeModel]()
@@ -71,7 +72,7 @@ class DetailsViewController: UIViewController {
                         tempRecipes.append(recipe)
                     }
                 }
-                self?.recipeArray = tempRecipes
+                weakSelf.recipeArray = tempRecipes
             case .failure(let error):
                 print(error)
             }
