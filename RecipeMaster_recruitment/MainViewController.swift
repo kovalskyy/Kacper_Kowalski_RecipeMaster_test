@@ -33,8 +33,8 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         viewModel = FacebookViewModel()
         
 //        self.loginButton.delegate = self
-        mainImage.layer.cornerRadius = mainImage.frame.height/2
-        mainImage.clipsToBounds = true
+        self.mainImage.layer.cornerRadius = mainImage.frame.height/2
+        self.mainImage.clipsToBounds = true
     }
     
     // MARK: - Facebook/Rx binding

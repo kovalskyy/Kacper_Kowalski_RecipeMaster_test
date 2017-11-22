@@ -22,7 +22,7 @@
 		2B65B93A1FC4655D00EE4D7E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65B9391FC4655D00EE4D7E /* Settings.swift */; };
 		2B899C9E1FC3068A00DE5A33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B899C9D1FC3068A00DE5A33 /* Constants.swift */; };
 		2B899CA01FC30AC300DE5A33 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B899C9F1FC30AC300DE5A33 /* Service.swift */; };
-		2BB7B0FF1FC2DDB700EDECDD /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7B0FE1FC2DDB700EDECDD /* RecipeModel.swift */; };
+		2BB7B0FF1FC2DDB700EDECDD /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7B0FE1FC2DDB700EDECDD /* Recipe.swift */; };
 		2BB7B1011FC2F3CA00EDECDD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7B1001FC2F3CA00EDECDD /* NetworkManager.swift */; };
 		2BB7B1031FC2F66700EDECDD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7B1021FC2F66700EDECDD /* Result.swift */; };
 		2BF8ACAD1FC4385C00641BBE /* FacebookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8ACAC1FC4385C00641BBE /* FacebookViewModel.swift */; };
@@ -50,7 +50,7 @@
 		2B65B9391FC4655D00EE4D7E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2B899C9D1FC3068A00DE5A33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B899C9F1FC30AC300DE5A33 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		2BB7B0FE1FC2DDB700EDECDD /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		2BB7B0FE1FC2DDB700EDECDD /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		2BB7B1001FC2F3CA00EDECDD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2BB7B1021FC2F66700EDECDD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2BF8ACAC1FC4385C00641BBE /* FacebookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewModel.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		23628B091F9F5DBA00040378 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2BB7B0FE1FC2DDB700EDECDD /* RecipeModel.swift */,
+				2BB7B0FE1FC2DDB700EDECDD /* Recipe.swift */,
 				2B65B9351FC44E5000EE4D7E /* Account.swift */,
 			);
 			name = Models;
@@ -375,7 +375,7 @@
 				2BB7B1031FC2F66700EDECDD /* Result.swift in Sources */,
 				2BF8ACAD1FC4385C00641BBE /* FacebookViewModel.swift in Sources */,
 				2B899CA01FC30AC300DE5A33 /* Service.swift in Sources */,
-				2BB7B0FF1FC2DDB700EDECDD /* RecipeModel.swift in Sources */,
+				2BB7B0FF1FC2DDB700EDECDD /* Recipe.swift in Sources */,
 				2B899C9E1FC3068A00DE5A33 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

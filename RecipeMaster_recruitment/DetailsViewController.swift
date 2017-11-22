@@ -12,9 +12,9 @@ import Photos
 
 class DetailsViewController: UIViewController {
 
-    var recipe: Recipe!
+    var recipe: Recipp!
     let service = RecipeService()
-    private var recipeArray = [RecipeModel]()
+    
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descr: UILabel!
@@ -44,41 +44,15 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hideTestDataOnLoad()
-        getRecipes(fromService: service)
-//        self.updateUI()
+        self.hideTestDataOnLoad()
+        recipe.fetchRecipe {
+        self.updateUI()
         self.acitivityIndicator.stopAnimating()
-
-//        hideTestDataOnLoad()
-//        recipe = Recipe()
-//
-//        recipe.fetchRecipe {
-//        self.updateUI()
-//        self.acitivityIndicator.stopAnimating()
-//        }
+        }
     }
 
     //MARK: Private methods
     
-    private func getRecipes<S: Gettable>(fromService service: S) where S.T == Array<RecipeModel?> {
-        
-        service.get { [weak self] (result) in
-            guard let weakSelf = self else { return }
-            switch result {
-            case .success(let recipes):
-                var tempRecipes = [RecipeModel]()
-                for recipe in recipes {
-                    if let recipe = recipe {
-                        tempRecipes.append(recipe)
-                    }
-                }
-                weakSelf.recipeArray = tempRecipes
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-
     private func hideTestDataOnLoad() {
         self.descr.text = ""
         self.ingredients.text = ""
