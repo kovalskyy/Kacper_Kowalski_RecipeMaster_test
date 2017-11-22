@@ -8,8 +8,9 @@ target 'RecipeMaster_recruitment' do
 	pod 'FBSDKLoginKit' 
 	pod 'Alamofire'
 	pod 'SDWebImage'
-	pod 'Gloss'
 	pod 'RxSwift'
   	pod 'RxCocoa'
 	pod 'SwiftyBeaver'
+	pod 'ObjectMapper'
+	pod 'SwinjectStoryboard'
 end

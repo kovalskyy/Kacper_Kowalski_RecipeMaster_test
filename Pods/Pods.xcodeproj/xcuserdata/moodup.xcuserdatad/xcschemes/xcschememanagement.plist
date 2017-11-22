@@ -29,7 +29,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Gloss.xcscheme</key>
+		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -55,6 +55,16 @@
 			<false/>
 		</dict>
 		<key>SwiftyBeaver.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Swinject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwinjectStoryboard.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
