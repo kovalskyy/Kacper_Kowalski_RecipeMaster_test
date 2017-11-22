@@ -1,5 +1,5 @@
 //
-//  APiClient.swift
+//  APiManager.swift
 //  RecipeMaster_recruitment
 //
 //  Created by Moodup on 22.11.2017.
@@ -11,7 +11,7 @@ import RxSwift
 import Alamofire
 import AlamofireObjectMapper
 
-class ApiClient: ApiProtocol {
+class ApiManager: ApiProtocol {
     
     func getRecipe() -> Observable<Recipe> {
         let url = URL(string: endPoint)!

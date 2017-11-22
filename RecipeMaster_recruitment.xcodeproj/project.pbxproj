@@ -18,8 +18,10 @@
 		23F9A29E1FA32FF90005F851 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9A29D1FA32FF90005F851 /* RecipeService.swift */; };
 		2B38E2A91FC5893600C54BF8 /* UINavigation+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2A81FC5893600C54BF8 /* UINavigation+Title.swift */; };
 		2B38E2AD1FC59BFC00C54BF8 /* APiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2AC1FC59BFC00C54BF8 /* APiProtocol.swift */; };
-		2B38E2AF1FC59C1700C54BF8 /* APiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2AE1FC59C1700C54BF8 /* APiClient.swift */; };
-		2B3C3D781FC4325A002F3749 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C3D771FC4325A002F3749 /* ViewModel.swift */; };
+		2B38E2AF1FC59C1700C54BF8 /* APiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2AE1FC59C1700C54BF8 /* APiManager.swift */; };
+		2B38E2B11FC5B26C00C54BF8 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2B01FC5B26C00C54BF8 /* DetailViewModel.swift */; };
+		2B38E2B31FC5BD9100C54BF8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2B21FC5BD9100C54BF8 /* UIViewController+Alert.swift */; };
+		2B3C3D781FC4325A002F3749 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C3D771FC4325A002F3749 /* BaseViewModel.swift */; };
 		2B65B9361FC44E5000EE4D7E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65B9351FC44E5000EE4D7E /* Account.swift */; };
 		2B65B93A1FC4655D00EE4D7E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65B9391FC4655D00EE4D7E /* Settings.swift */; };
 		2B899C9E1FC3068A00DE5A33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B899C9D1FC3068A00DE5A33 /* Constants.swift */; };
@@ -48,8 +50,10 @@
 		23FF7F271FA0C0A70016E36B /* RecipeMaster_recruitment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeMaster_recruitment.entitlements; sourceTree = "<group>"; };
 		2B38E2A81FC5893600C54BF8 /* UINavigation+Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+Title.swift"; sourceTree = "<group>"; };
 		2B38E2AC1FC59BFC00C54BF8 /* APiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APiProtocol.swift; sourceTree = "<group>"; };
-		2B38E2AE1FC59C1700C54BF8 /* APiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APiClient.swift; sourceTree = "<group>"; };
-		2B3C3D771FC4325A002F3749 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2B38E2AE1FC59C1700C54BF8 /* APiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APiManager.swift; sourceTree = "<group>"; };
+		2B38E2B01FC5B26C00C54BF8 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		2B38E2B21FC5BD9100C54BF8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		2B3C3D771FC4325A002F3749 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		2B65B9351FC44E5000EE4D7E /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		2B65B9391FC4655D00EE4D7E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2B899C9D1FC3068A00DE5A33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			children = (
 				23628AF71F9F5BEF00040378 /* MainViewController.swift */,
 				23628B0E1F9F91A400040378 /* DetailsViewController.swift */,
+				2B38E2B01FC5B26C00C54BF8 /* DetailViewModel.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				2B38E2A81FC5893600C54BF8 /* UINavigation+Title.swift */,
+				2B38E2B21FC5BD9100C54BF8 /* UIViewController+Alert.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +190,7 @@
 		2B38E2AA1FC59B2000C54BF8 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				2B899C9D1FC3068A00DE5A33 /* Constants.swift */,
 				2B38E2AB1FC59BC200C54BF8 /* Models */,
 			);
 			name = Backend;
@@ -193,8 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				2B38E2AC1FC59BFC00C54BF8 /* APiProtocol.swift */,
-				2B38E2AE1FC59C1700C54BF8 /* APiClient.swift */,
-				2B899C9D1FC3068A00DE5A33 /* Constants.swift */,
+				2B38E2AE1FC59C1700C54BF8 /* APiManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,7 +208,7 @@
 		2B3C3D761FC431FF002F3749 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2B3C3D771FC4325A002F3749 /* ViewModel.swift */,
+				2B3C3D771FC4325A002F3749 /* BaseViewModel.swift */,
 				2BF8ACAC1FC4385C00641BBE /* FacebookViewModel.swift */,
 			);
 			name = ViewModels;
@@ -391,8 +397,8 @@
 				23628AF61F9F5BEF00040378 /* AppDelegate.swift in Sources */,
 				23628B0F1F9F91A400040378 /* DetailsViewController.swift in Sources */,
 				2B65B93A1FC4655D00EE4D7E /* Settings.swift in Sources */,
-				2B3C3D781FC4325A002F3749 /* ViewModel.swift in Sources */,
-				2B38E2AF1FC59C1700C54BF8 /* APiClient.swift in Sources */,
+				2B3C3D781FC4325A002F3749 /* BaseViewModel.swift in Sources */,
+				2B38E2AF1FC59C1700C54BF8 /* APiManager.swift in Sources */,
 				2BB7B1011FC2F3CA00EDECDD /* NetworkManager.swift in Sources */,
 				2B38E2A91FC5893600C54BF8 /* UINavigation+Title.swift in Sources */,
 				2B38E2AD1FC59BFC00C54BF8 /* APiProtocol.swift in Sources */,
@@ -402,7 +408,9 @@
 				2BF8ACAD1FC4385C00641BBE /* FacebookViewModel.swift in Sources */,
 				2B899CA01FC30AC300DE5A33 /* Service.swift in Sources */,
 				2BB7B0FF1FC2DDB700EDECDD /* Recipe.swift in Sources */,
+				2B38E2B31FC5BD9100C54BF8 /* UIViewController+Alert.swift in Sources */,
 				2B899C9E1FC3068A00DE5A33 /* Constants.swift in Sources */,
+				2B38E2B11FC5B26C00C54BF8 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@ import Photos
 class DetailsViewController: UIViewController {
 
     var recipe: Recipp!
-//    let service = RecipeService()
+    var viewModel: DetailViewModel?
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descr: UILabel!
@@ -43,11 +43,16 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.prepareView()
+        self.viewModel?.delegate = self
+        
         self.hideTestDataOnLoad()
-        recipe.fetchRecipe {
-        self.updateUI()
+//        self.updateUI()
         self.acitivityIndicator.stopAnimating()
-        }
+////        recipe.fetchRecipe {
+//            self.updateUI()
+//            self.acitivityIndicator.stopAnimating()
+//        }
     }
 
     //MARK: Private methods
@@ -86,13 +91,18 @@ class DetailsViewController: UIViewController {
     }
 }
 
-extension UIViewController {
-    
-    func presentAlert(withTitle title: String, message : String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
-        }
-        alertController.addAction(OKAction)
-        self.present(alertController, animated: true, completion: nil)
+extension DetailsViewController: RecipeProtocol {
+    func prepareView() {
+        self.viewModel?.getRecipe()
     }
+    
+    func onError(error: Error) {
+        
+    }
+    
+    func onCompleted(recipe: Recipe) {
+        
+    }
+    
 }
+

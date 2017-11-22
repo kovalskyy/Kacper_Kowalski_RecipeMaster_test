@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  BaseViewModel.swift
 //  RecipeMaster_recruitment
 //
 //  Created by Moodup on 21.11.2017.
@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-class ViewModel {
+class BaseViewModel {
     let disposeBag = DisposeBag()
 }
