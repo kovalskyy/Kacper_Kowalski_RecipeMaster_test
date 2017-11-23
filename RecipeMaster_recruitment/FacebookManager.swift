@@ -1,5 +1,5 @@
 //
-//  FacebookViewModel.swift
+//  FacebookManager.swift
 //  RecipeMaster_recruitment
 //
 //  Created by Moodup on 21.11.2017.
@@ -10,13 +10,8 @@ import Foundation
 import RxSwift
 import FBSDKLoginKit
 
-protocol FacebookSignInViewModelDelegate: class {
-    func didClose()
-}
-
-final class FacebookViewModel {
+final class FacebookManager {
     
-    let operationInProgress = Variable(false)
     let errorMessage = PublishSubject<String>()
     
     weak var delegate: FacebookSignInViewModelDelegate!

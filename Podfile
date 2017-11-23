@@ -14,4 +14,7 @@ target 'RecipeMaster_recruitment' do
 	pod 'ObjectMapper'
 	pod 'SwinjectStoryboard'
 	pod 'AlamofireObjectMapper'
+
+	#UI
+	pod 'LGButton'
 end

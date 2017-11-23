@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9620C020F1C30A36A0F419914902AC03'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = 'DCB2B03C26F284864226302AFAEC546C'
+               BlueprintName = 'LGButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SDWebImage.framework'>
+               BuildableName = 'LGButton.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

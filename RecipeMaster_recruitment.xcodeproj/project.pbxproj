@@ -24,7 +24,7 @@
 		2B38E2B61FC5C85B00C54BF8 /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2B51FC5C85B00C54BF8 /* SwinjectStoryboard+Setup.swift */; };
 		2B899C9E1FC3068A00DE5A33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B899C9D1FC3068A00DE5A33 /* Constants.swift */; };
 		2BB7B0FF1FC2DDB700EDECDD /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7B0FE1FC2DDB700EDECDD /* Recipe.swift */; };
-		2BF8ACAD1FC4385C00641BBE /* FacebookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8ACAC1FC4385C00641BBE /* FacebookViewModel.swift */; };
+		2BF8ACAD1FC4385C00641BBE /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8ACAC1FC4385C00641BBE /* FacebookManager.swift */; };
 		A3BD9D63C3405EE74C513359 /* Pods_RecipeMaster_recruitment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBFC86FEED34D677D4DAA39 /* Pods_RecipeMaster_recruitment.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		2B38E2B51FC5C85B00C54BF8 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		2B899C9D1FC3068A00DE5A33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2BB7B0FE1FC2DDB700EDECDD /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		2BF8ACAC1FC4385C00641BBE /* FacebookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewModel.swift; sourceTree = "<group>"; };
+		2BF8ACAC1FC4385C00641BBE /* FacebookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
 		474AFDE7FE5258339992DC7E /* Pods-RecipeMaster_recruitment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMaster_recruitment.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMaster_recruitment/Pods-RecipeMaster_recruitment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +99,7 @@
 				23628B091F9F5DBA00040378 /* Models */,
 				23628B081F9F5DB800040378 /* Views */,
 				23628B071F9F5DB600040378 /* Controllers */,
+				2BF8ACAC1FC4385C00641BBE /* FacebookManager.swift */,
 				2B38E2AA1FC59B2000C54BF8 /* Backend */,
 				2B38E2A71FC588F500C54BF8 /* Extensions */,
 				23F9A29A1FA32E770005F851 /* Services - unused */,
@@ -185,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				2B38E2B01FC5B26C00C54BF8 /* DetailViewModel.swift */,
-				2BF8ACAC1FC4385C00641BBE /* FacebookViewModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -308,6 +308,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -324,6 +325,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -386,7 +388,7 @@
 				2B38E2AD1FC59BFC00C54BF8 /* APIProtocol.swift in Sources */,
 				235A4F0D1FAB41FD00BE2433 /* Label.swift in Sources */,
 				23F9A29E1FA32FF90005F851 /* RecipeService.swift in Sources */,
-				2BF8ACAD1FC4385C00641BBE /* FacebookViewModel.swift in Sources */,
+				2BF8ACAD1FC4385C00641BBE /* FacebookManager.swift in Sources */,
 				2BB7B0FF1FC2DDB700EDECDD /* Recipe.swift in Sources */,
 				2B38E2B31FC5BD9100C54BF8 /* UIViewController+Alert.swift in Sources */,
 				2B899C9E1FC3068A00DE5A33 /* Constants.swift in Sources */,

@@ -36,14 +36,6 @@ class DetailsViewController: UIViewController {
     
     // MARK: Private methods
     
-    private func hideTestDataOnLoad() {
-        self.descr.text = ""
-        self.ingredients.text = ""
-        self.preparings.text = ""
-        self.firstImage.image = nil
-        self.secondImage.image = nil
-    }
-    
     fileprivate func updateUI () {
         var ingredients = ""
 
@@ -69,6 +61,14 @@ class DetailsViewController: UIViewController {
         self.preparings.text = preparings
         self.name.text = recipe.title
         self.descr.text = recipe.description
+    }
+    
+    private func hideTestDataOnLoad() {
+        self.descr.text = ""
+        self.ingredients.text = ""
+        self.preparings.text = ""
+        self.firstImage.image = nil
+        self.secondImage.image = nil
     }
 
     // MARK: Saving Images
