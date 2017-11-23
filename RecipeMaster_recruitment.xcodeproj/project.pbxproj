@@ -16,7 +16,6 @@
 		23628B0D1F9F762A00040378 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23628B0C1F9F762A00040378 /* Detail.storyboard */; };
 		23628B0F1F9F91A400040378 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23628B0E1F9F91A400040378 /* DetailsViewController.swift */; };
 		23F9A29E1FA32FF90005F851 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9A29D1FA32FF90005F851 /* RecipeService.swift */; };
-		2B1271821FC6FE0500CA8A89 /* LGButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1271811FC6FE0500CA8A89 /* LGButton+Rx.swift */; };
 		2B38E2A91FC5893600C54BF8 /* UINavigation+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2A81FC5893600C54BF8 /* UINavigation+Title.swift */; };
 		2B38E2AD1FC59BFC00C54BF8 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2AC1FC59BFC00C54BF8 /* APIProtocol.swift */; };
 		2B38E2AF1FC59C1700C54BF8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38E2AE1FC59C1700C54BF8 /* APIManager.swift */; };
@@ -44,7 +43,6 @@
 		23628B0E1F9F91A400040378 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		23F9A29D1FA32FF90005F851 /* RecipeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		23FF7F271FA0C0A70016E36B /* RecipeMaster_recruitment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeMaster_recruitment.entitlements; sourceTree = "<group>"; };
-		2B1271811FC6FE0500CA8A89 /* LGButton+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LGButton+Rx.swift"; sourceTree = "<group>"; };
 		2B38E2A81FC5893600C54BF8 /* UINavigation+Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+Title.swift"; sourceTree = "<group>"; };
 		2B38E2AC1FC59BFC00C54BF8 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		2B38E2AE1FC59C1700C54BF8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				2B38E2A81FC5893600C54BF8 /* UINavigation+Title.swift */,
 				2B38E2B21FC5BD9100C54BF8 /* UIViewController+Alert.swift */,
 				2B38E2B51FC5C85B00C54BF8 /* SwinjectStoryboard+Setup.swift */,
-				2B1271811FC6FE0500CA8A89 /* LGButton+Rx.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 			files = (
 				23628AF81F9F5BEF00040378 /* MainViewController.swift in Sources */,
 				2B38E2B61FC5C85B00C54BF8 /* SwinjectStoryboard+Setup.swift in Sources */,
-				2B1271821FC6FE0500CA8A89 /* LGButton+Rx.swift in Sources */,
 				23628AF61F9F5BEF00040378 /* AppDelegate.swift in Sources */,
 				23628B0F1F9F91A400040378 /* DetailsViewController.swift in Sources */,
 				2B38E2AF1FC59C1700C54BF8 /* APIManager.swift in Sources */,

@@ -52,12 +52,8 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         FBSDKLoginManager()
             .logIn(withReadPermissions:facebookPermissions,
                    from: self, handler:viewModel.facebookHandler)
-                    self.fetchProfileInfo()git 
+                    self.fetchProfileInfo()
     }
-    
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {}
-    
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {}
     
     func fetchProfileInfo() {
         FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, id"])
@@ -89,4 +85,11 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         alert.popoverPresentationController?.sourceRect = self.view.frame;
         self.present(alert, animated: true, completion: nil)
     }
-} 
+}
+    // MARK: Extension
+
+extension MainViewController {
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {}
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {}
+}
