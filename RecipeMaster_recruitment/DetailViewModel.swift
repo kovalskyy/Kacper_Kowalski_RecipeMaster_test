@@ -7,14 +7,16 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol RecipeProtocol: NSObjectProtocol {
     func onError(error: Error)
     func onCompleted(recipe: Recipe)
 }
 
-class DetailViewModel: BaseViewModel {
+class DetailViewModel {
     
+    let disposeBag = DisposeBag()
     private var apiManager: ApiManager?
     private var recipe: Recipe?
     

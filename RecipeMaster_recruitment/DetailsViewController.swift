@@ -92,14 +92,13 @@ extension DetailsViewController: RecipeProtocol {
     func onError(error: Error) {
         presentAlert(withTitle: "An error occured!", message: error.localizedDescription)
     }
-    
     func onCompleted(recipe: Recipe) {
         self.recipe = recipe
         self.updateUI()
         
-        guard let urlst = URL(string: "http://mooduplabs.com/test/pizza2.jpg") else { return }
+        guard let urlst = URL(string: imgst) else { return }
             self.firstImage.sd_setImage(with: urlst, completed: nil)
-        guard let urlsd = URL(string: "http://mooduplabs.com/test/pizza3.jpg") else { return }
+        guard let urlsd = URL(string: imgsd) else { return }
             self.secondImage.sd_setImage(with: urlsd, completed: nil)
         
         self.activityIndicator.stopAnimating()

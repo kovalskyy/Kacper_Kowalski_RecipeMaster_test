@@ -9,3 +9,7 @@
 import Foundation
 
 let endPoint = "http://mooduplabs.com/test/info.php"
+let imgst = "http://mooduplabs.com/test/pizza2.jpg"
+let imgsd = "http://mooduplabs.com/test/pizza3.jpg"
+
+let facebookPermissions: [String] = ["email"]

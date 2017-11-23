@@ -15,13 +15,13 @@ extension SwinjectStoryboard {
         defaultContainer.register(ApiManager.self) { _ in ApiManager()
         }
         
-        // MARK: - ViewController
+        // MARK: ViewController
         
         defaultContainer.storyboardInitCompleted(DetailsViewController.self) { (resolver, controller) in
             controller.viewModel = resolver.resolve(DetailViewModel.self)
         }
         
-        // MARK: - ViewModel
+        // MARK: ViewModel
         
         defaultContainer.register(DetailViewModel.self) { resolver in
             DetailViewModel(apiManager: resolver.resolve(ApiManager.self)!)
