@@ -23,7 +23,6 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style:.plain, target:nil, action:nil)
     }
     
@@ -32,6 +31,7 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         viewModel = FacebookManager()
         self.facebookButton.delegate = self
+        setupBinding()
         
         self.mainImage.layer.cornerRadius = mainImage.frame.height/2
         self.mainImage.clipsToBounds = true
@@ -52,7 +52,22 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         FBSDKLoginManager()
             .logIn(withReadPermissions:facebookPermissions,
                    from: self, handler:viewModel.facebookHandler)
-        
+                    self.fetchProfileInfo()git 
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {}
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {}
+    
+    func fetchProfileInfo() {
+        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, id"])
+            .start(completionHandler:  { (connection, result, error) in
+                guard let result = result as? NSDictionary,
+                    let user = result["name"] as? String
+                    else { return }
+                print(result)
+                self.navigationItem.setTitle(title: "Recipe Master", subtitle: ("Logged in as: \(user)"))
+            })
     }
 
     // MARK: ActionSheet
@@ -64,50 +79,14 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in }
         
         let recipeActionButton = UIAlertAction(title: "Get The Recipe", style: .default) { action in self.performSegue(withIdentifier: "GetRecipeID", sender: self) }
-    
-        let facebookActionButton = UIAlertAction(title: "Login with Facebook", style: .default) { action in self.handleCustomFacebookLogin() }
 
         //actions
         alert.addAction(cancelActionButton)
         alert.addAction(recipeActionButton)
-        alert.addAction(facebookActionButton)
         
         // support ipad
         alert.popoverPresentationController?.sourceView = self.view;
         alert.popoverPresentationController?.sourceRect = self.view.frame;
         self.present(alert, animated: true, completion: nil)
     }
-    
-    //MARK: Facebook
-    
-        func handleCustomFacebookLogin() {
-            FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) {
-                (result, error) in
-    
-                if error != nil {
-                    print("something went wrong", error ?? "")
-                    return
-                }
-                self.fetchProfile()
-            }
-        }
-    
-        func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {}
-    
-        func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {}
-    
-        func fetchProfile() {
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, id"]).start(completionHandler:  { (connection, result, error) in
-                guard let result = result as? NSDictionary,
-                    let name = result["name"] as? String
-                    else {
-                        return
-                }
-                self.navigationItem.setTitle(title: "Recipe Master", subtitle: ("Logged in as: \(name)"))
-                print(result)
-            })
-        }
-}
-
-
-
+} 

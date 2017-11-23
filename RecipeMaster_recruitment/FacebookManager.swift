@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import RxSwift
 import FBSDKLoginKit
 
@@ -27,3 +28,5 @@ final class FacebookManager {
         }
     }
 }
+
+
