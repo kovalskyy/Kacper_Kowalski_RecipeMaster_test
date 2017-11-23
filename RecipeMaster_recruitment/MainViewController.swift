@@ -50,7 +50,7 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     private func facebookSignIn() {
         FBSDKLoginManager()
-            .logIn(withReadPermissions: Settings.facebookPermissions,
+            .logIn(withReadPermissions:facebookPermissions,
                    from: self, handler:viewModel.facebookHandler)
     }
     

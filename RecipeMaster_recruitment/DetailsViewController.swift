@@ -11,9 +11,6 @@ import SDWebImage
 import Photos
 
 class DetailsViewController: UIViewController {
-
-    var recipe: Recipe!
-    var viewModel: DetailViewModel?
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descr: UILabel!
@@ -23,15 +20,17 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    fileprivate var recipe: Recipe!
+    var detailViewModel: DetailViewModel?
+    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.automaticallyAdjustsScrollViewInsets = false
-        
         self.prepareView()
-        self.viewModel?.delegate = self
+        self.detailViewModel?.delegate = self
         self.hideTestDataOnLoad()
     }
     
@@ -46,16 +45,23 @@ class DetailsViewController: UIViewController {
     }
     
     fileprivate func updateUI () {
-        
         var ingredients = ""
+
         guard let ingr = recipe.ingredients else { return }
-            for ingredient in ingr {
+            let ingrs = self.detailViewModel?.map(ingr)
+        
+        guard let pizzaIngrs = ingrs else { return }
+            for ingredient in pizzaIngrs {
                 ingredients.append(ingredient)
         }
         
         var preparings = ""
+        
         guard let prep = recipe.preparings else { return }
-            for preparing in prep {
+            let preps = self.detailViewModel?.mapEnumerated(prep)
+        
+        guard let pizzaPreps = preps else { return }
+            for preparing in pizzaPreps {
                 preparings.append(preparing)
         }
         
@@ -87,7 +93,7 @@ class DetailsViewController: UIViewController {
 
 extension DetailsViewController: RecipeProtocol {
     func prepareView() {
-        self.viewModel?.getRecipe()
+        self.detailViewModel?.getRecipe()
     }
     func onError(error: Error) {
         presentAlert(withTitle: "An error occured!", message: error.localizedDescription)

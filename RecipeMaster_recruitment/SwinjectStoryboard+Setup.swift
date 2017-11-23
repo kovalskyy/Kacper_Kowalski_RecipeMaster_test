@@ -18,7 +18,7 @@ extension SwinjectStoryboard {
         // MARK: ViewController
         
         defaultContainer.storyboardInitCompleted(DetailsViewController.self) { (resolver, controller) in
-            controller.viewModel = resolver.resolve(DetailViewModel.self)
+            controller.detailViewModel = resolver.resolve(DetailViewModel.self)
         }
         
         // MARK: ViewModel

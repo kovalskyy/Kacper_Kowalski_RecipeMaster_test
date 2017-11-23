@@ -14,7 +14,7 @@ protocol FacebookSignInViewModelDelegate: class {
     func didClose()
 }
 
-final class FacebookViewModel: BaseViewModel {
+final class FacebookViewModel {
     
     let operationInProgress = Variable(false)
     let errorMessage = PublishSubject<String>()
