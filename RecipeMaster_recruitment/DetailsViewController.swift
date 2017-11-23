@@ -21,36 +21,21 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var preparings: UILabel!
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var secondImage: UIImageView!
-    @IBOutlet weak var acitivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    //MARK: Lifecycle
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.automaticallyAdjustsScrollViewInsets = false
-        
-        let imageUrl1:NSURL? = NSURL(string: "http://mooduplabs.com/test/pizza2.jpg")
-        if let url = imageUrl1 {
-            firstImage.sd_setImage(with: url as URL!)
-        }
-        
-        let imageUrl2: NSURL? = NSURL(string: "http://mooduplabs.com/test/pizza3.jpg")
-        if let url = imageUrl2 {
-            secondImage.sd_setImage(with: url as URL!)
-        }
-    }
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.automaticallyAdjustsScrollViewInsets = false
+        
         self.prepareView()
         self.viewModel?.delegate = self
-        
         self.hideTestDataOnLoad()
-        self.acitivityIndicator.stopAnimating()
     }
     
-    //MARK: Private methods
+    // MARK: Private methods
     
     private func hideTestDataOnLoad() {
         self.descr.text = ""
@@ -61,15 +46,17 @@ class DetailsViewController: UIViewController {
     }
     
     fileprivate func updateUI () {
+        
         var ingredients = ""
         guard let ingr = recipe.ingredients else { return }
-        for ingredient in ingr {
-            ingredients.append(ingredient)
+            for ingredient in ingr {
+                ingredients.append(ingredient)
         }
+        
         var preparings = ""
         guard let prep = recipe.preparings else { return }
-        for preparing in prep {
-            preparings.append(preparing)
+            for preparing in prep {
+                preparings.append(preparing)
         }
         
         self.ingredients.text = ingredients
@@ -78,7 +65,7 @@ class DetailsViewController: UIViewController {
         self.descr.text = recipe.description
     }
 
-    //MARK: Saving Images
+    // MARK: Saving Images
     
     @IBAction func saveFirstImage(_ sender: UIButton) {
         UIImageWriteToSavedPhotosAlbum(firstImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
@@ -96,16 +83,27 @@ class DetailsViewController: UIViewController {
         }
     }
 }
+    // MARK: Extensions
 
 extension DetailsViewController: RecipeProtocol {
     func prepareView() {
         self.viewModel?.getRecipe()
     }
-    func onError(error: Error) {}
+    func onError(error: Error) {
+        presentAlert(withTitle: "An error occured!", message: error.localizedDescription)
+    }
     
     func onCompleted(recipe: Recipe) {
         self.recipe = recipe
         self.updateUI()
+        
+        guard let urlst = URL(string: "http://mooduplabs.com/test/pizza2.jpg") else { return }
+            self.firstImage.sd_setImage(with: urlst, completed: nil)
+        guard let urlsd = URL(string: "http://mooduplabs.com/test/pizza3.jpg") else { return }
+            self.secondImage.sd_setImage(with: urlsd, completed: nil)
+        
+        self.activityIndicator.stopAnimating()
     }
 }
+
 

@@ -110,7 +110,7 @@
 				2B3C3D761FC431FF002F3749 /* ViewModels */,
 				23628B081F9F5DB800040378 /* Views */,
 				23628B071F9F5DB600040378 /* Controllers */,
-				23F9A29A1FA32E770005F851 /* Services */,
+				23F9A29A1FA32E770005F851 /* Services - unused */,
 				23628B0A1F9F5DC400040378 /* Resources */,
 			);
 			path = RecipeMaster_recruitment;
@@ -156,7 +156,7 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		23F9A29A1FA32E770005F851 /* Services */ = {
+		23F9A29A1FA32E770005F851 /* Services - unused */ = {
 			isa = PBXGroup;
 			children = (
 				23F9A29D1FA32FF90005F851 /* RecipeService.swift */,
@@ -166,7 +166,7 @@
 				2B38E2AA1FC59B2000C54BF8 /* Backend */,
 				2B38E2A71FC588F500C54BF8 /* Extensions */,
 			);
-			name = Services;
+			name = "Services - unused";
 			sourceTree = "<group>";
 		};
 		2B38E2A61FC5862900C54BF8 /* Settings */ = {
