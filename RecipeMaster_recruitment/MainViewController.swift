@@ -14,7 +14,7 @@ import RxCocoa
 class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var mainImage: UIImageView!
-
+    @IBOutlet weak var facebookButton: FBSDKLoginButton!
     
     private var viewModel: FacebookManager!
     let disposeBag = DisposeBag()
@@ -31,6 +31,7 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         viewModel = FacebookManager()
+        self.facebookButton.delegate = self
         
         self.mainImage.layer.cornerRadius = mainImage.frame.height/2
         self.mainImage.clipsToBounds = true
@@ -38,21 +39,22 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     // MARK: - Facebook/Rx binding
     
-//    private func setupBinding() {
-//
-//        facebookButton.rx.tap
-//            .subscribe(onNext: { [weak self] in
-//                self?.facebookSignIn()
-//            })
-//            .disposed(by: disposeBag)
-//    }
-//
-//    private func facebookSignIn() {
-//        FBSDKLoginManager()
-//            .logIn(withReadPermissions:facebookPermissions,
-//                   from: self, handler:viewModel.facebookHandler)
-//    }
-//
+    private func setupBinding() {
+
+        facebookButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.facebookSignIn()
+            })
+            .disposed(by: disposeBag)
+    }
+
+    private func facebookSignIn() {
+        FBSDKLoginManager()
+            .logIn(withReadPermissions:facebookPermissions,
+                   from: self, handler:viewModel.facebookHandler)
+        
+    }
+
     // MARK: ActionSheet
     
     @IBAction func actionSheet(_ sender: UIButton) {
