@@ -39,7 +39,7 @@
                                             <constraint firstAttribute="height" constant="44" id="nzf-fi-LtQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="Get Recipe / Login">
+                                        <state key="normal" title="Get Recipe">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -49,11 +49,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbj-BJ-5AT">
-                                <rect key="frame" x="112" y="166.5" width="150" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbj-BJ-5AT" customClass="FBSDKButton">
+                                <rect key="frame" x="87" y="485.5" width="200" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="oYN-zi-TTU"/>
-                                    <constraint firstAttribute="height" constant="30" id="u9N-wI-yon"/>
+                                    <constraint firstAttribute="width" constant="200" id="SSW-7R-5at"/>
+                                    <constraint firstAttribute="height" constant="44" id="noh-pH-Iqs"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -62,7 +63,7 @@
                         <constraints>
                             <constraint firstItem="Uoa-3E-1NG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Hh-ag-JDk"/>
                             <constraint firstItem="Zbj-BJ-5AT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Lm-jb-xlj"/>
-                            <constraint firstItem="Uoa-3E-1NG" firstAttribute="top" secondItem="Zbj-BJ-5AT" secondAttribute="bottom" constant="15" id="Nx2-y9-JLd"/>
+                            <constraint firstItem="Zbj-BJ-5AT" firstAttribute="top" secondItem="Uoa-3E-1NG" secondAttribute="bottom" constant="30" id="OnW-u6-e0V"/>
                             <constraint firstItem="Uoa-3E-1NG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n22-hx-ndf"/>
                         </constraints>
                     </view>

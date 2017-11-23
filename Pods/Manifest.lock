@@ -15,7 +15,6 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.27.1):
     - FBSDKCoreKit
-  - LGButton (1.0.4)
   - ObjectMapper (3.1.0)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
@@ -34,7 +33,6 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
-  - LGButton
   - ObjectMapper
   - RxCocoa
   - RxSwift
@@ -49,7 +47,6 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
   FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
   FBSDKShareKit: 6a6a0ef9e850c741e4e1d7a7d21335205e997ec1
-  LGButton: 40c36e2b7a274d9cb263420e568bc8890832954e
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
@@ -58,6 +55,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 08df06fc69f47395b97cb689641320caa2bded50
+PODFILE CHECKSUM: a131fdb5186ce79893ecf85cd64decde954e5088
 
 COCOAPODS: 1.3.1

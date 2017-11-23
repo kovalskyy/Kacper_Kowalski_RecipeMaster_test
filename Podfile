@@ -3,6 +3,7 @@ platform :ios, '11.0'
 use_frameworks!
 
 target 'RecipeMaster_recruitment' do
+
 	pod 'FBSDKCoreKit'
 	pod 'FBSDKShareKit'
 	pod 'FBSDKLoginKit' 
@@ -16,5 +17,6 @@ target 'RecipeMaster_recruitment' do
 	pod 'AlamofireObjectMapper'
 
 	#UI
-	pod 'LGButton'
+	#pod 'LGButton', '1.0.3'
+
 end

@@ -14,8 +14,6 @@ final class FacebookManager {
     
     let errorMessage = PublishSubject<String>()
     
-    weak var delegate: FacebookSignInViewModelDelegate!
-    
     func facebookHandler(_ loginResult: FBSDKLoginManagerLoginResult?, _ error: Error?) {
         if let error = error {
             log.error(error.localizedDescription)
