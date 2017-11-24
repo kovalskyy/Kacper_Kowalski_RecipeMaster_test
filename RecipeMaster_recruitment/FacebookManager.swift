@@ -21,7 +21,6 @@ final class FacebookManager {
             errorMessage.onNext(error.localizedDescription)
             return
         }
-        
         if loginResult?.isCancelled ?? false {
             log.debug("Facebook login canceled")
             return

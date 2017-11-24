@@ -37,11 +37,11 @@ class DetailViewModel {
         }).disposed(by: self.disposeBag)
     }
     
-    func map(_ item: [String]) -> [String] {
+    func parseRecipe(_ item: [String]) -> [String] {
         return [item.map{" - \($0)"}.joined(separator: "\n")]
     }
     
-    func mapEnumerated(_ item: [String]) -> [String] {
+    func parseRecipeList(_ item: [String]) -> [String] {
         return [item.enumerated().map{"\($0+1). \($1)"}.joined(separator: "\n")]
     }
 }

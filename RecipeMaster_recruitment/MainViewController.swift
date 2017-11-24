@@ -33,7 +33,7 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.facebookButton.delegate = self
         setupBinding()
         
-        self.mainImage.layer.cornerRadius = mainImage.frame.height/2
+        self.mainImage.layer.cornerRadius = mainImage.frame.height / 2
         self.mainImage.clipsToBounds = true
     }
     
@@ -53,17 +53,6 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
             .logIn(withReadPermissions:facebookPermissions,
                    from: self, handler:viewModel.facebookHandler)
                     self.fetchProfileInfo()
-    }
-    
-    func fetchProfileInfo() {
-        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, id"])
-            .start(completionHandler:  { (connection, result, error) in
-                guard let result = result as? NSDictionary,
-                    let user = result["name"] as? String
-                    else { return }
-                print(result)
-                self.navigationItem.setTitle(title: "Recipe Master", subtitle: ("Logged in as: \(user)"))
-            })
     }
 
     // MARK: ActionSheet
@@ -89,7 +78,18 @@ class MainViewController: UIViewController, FBSDKLoginButtonDelegate {
     // MARK: Extension
 
 extension MainViewController {
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {}
-    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+    }
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {}
+    
+    func fetchProfileInfo() {
+        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, id"])
+            .start(completionHandler:  { (connection, result, error) in
+                guard let result = result as? NSDictionary,
+                    let user = result["name"] as? String
+                    else { return }
+                print(result)
+                //self.navigationItem.setTitle(title: "Recipe Master", subtitle: ("Logged in as: \(user)"))
+            })
+    }
 }

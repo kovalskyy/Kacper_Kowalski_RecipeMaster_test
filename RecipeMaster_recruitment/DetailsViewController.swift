@@ -38,25 +38,24 @@ class DetailsViewController: UIViewController {
     
     fileprivate func updateUI () {
         var ingredients = ""
-
+        
         guard let ingr = recipe.ingredients else { return }
-            let ingrs = self.detailViewModel?.map(ingr)
+        let ingrs = self.detailViewModel?.parseRecipe(ingr)
         
         guard let pizzaIngrs = ingrs else { return }
-            for ingredient in pizzaIngrs {
-                ingredients.append(ingredient)
+        for ingredient in pizzaIngrs {
+            ingredients.append(ingredient)
         }
         
         var preparings = ""
         
         guard let prep = recipe.preparings else { return }
-            let preps = self.detailViewModel?.mapEnumerated(prep)
+        let preps = self.detailViewModel?.parseRecipeList(prep)
         
         guard let pizzaPreps = preps else { return }
-            for preparing in pizzaPreps {
-                preparings.append(preparing)
+        for preparing in pizzaPreps {
+            preparings.append(preparing)
         }
-        
         self.ingredients.text = ingredients
         self.preparings.text = preparings
         self.name.text = recipe.title
@@ -74,11 +73,13 @@ class DetailsViewController: UIViewController {
     // MARK: Saving Images
     
     @IBAction func saveFirstImage(_ sender: UIButton) {
-        UIImageWriteToSavedPhotosAlbum(firstImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        guard let pizzaImg = firstImage.image else { return }
+        UIImageWriteToSavedPhotosAlbum(pizzaImg, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @IBAction func saveSecondImage(_ sender: UIButton) {
-        UIImageWriteToSavedPhotosAlbum(secondImage.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        guard let pizzaImg = secondImage.image else { return }
+        UIImageWriteToSavedPhotosAlbum(pizzaImg, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
